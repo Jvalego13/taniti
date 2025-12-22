@@ -1,0 +1,578 @@
+/* Reset & Base */
+* { 
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("assets/background.png");
+  background-size: cover;        /* fills the screen */
+  background-repeat: no-repeat;  /* prevents tiling */
+  background-attachment: fixed;  /* subtle parallax effect */
+  background-position: center;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Layout */
+.container { 
+  max-width:1200px; 
+  margin:0 auto; 
+  padding:20px; 
+}
+
+header { 
+  background:#FDD9B5; 
+  padding:20px 0; 
+  color:#79BAEC; 
+}
+
+nav ul { 
+  list-style:none; 
+  display:flex; 
+  gap:20px; 
+  flex-wrap:wrap; 
+  justify-content:center; 
+  margin-top:10px; 
+}
+
+nav ul li a {
+  background:#fff; 
+  color:black; 
+  padding:10px 20px; 
+  border-radius:30px; 
+  border:2px solid #003087;
+  border-radius:30px; 
+  font-weight:bold;
+}
+
+nav ul li a.active, nav ul li a:hover { 
+  background:#000000; 
+  color:#fff; 
+}
+
+h1 { 
+  color:#000000; 
+  text-align:left; 
+  margin-bottom:-60px; 
+  margin-left: -80px; 
+  font-size:3rem;
+}
+
+h2 { 
+  font-size:2.2rem; 
+  color:#000000; 
+  text-align:center; 
+  margin-bottom:20px;
+  text-decoration: underline;
+}
+
+
+h3 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Buttons */
+.btn {
+  display:inline-block; 
+  background:#0c87ba; 
+  color:#fff; 
+  padding:12px 30px;
+  border-radius:30px;
+  font-size:1.1rem; 
+  margin:-15px auto; 
+  text-align:center;
+}
+
+.btn:hover { background:#0c87ba; }
+
+/* Sections */
+section { 
+  margin:40px 0;
+}
+
+.grid { 
+  display:grid; 
+  gap:0px;
+}
+
+.grid-2 { 
+  grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); 
+  padding:0 80px; 
+}
+
+
+.grid-3 {
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  text-align-last: center;
+  gap: 0px;
+  padding-bottom: 40px;
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  text-align-last: center;
+}
+
+.card {
+  background: none;
+  border-radius:8px;
+  padding:15px;
+  box-shadow:none;
+  text-align:center;
+}
+
+.activities-card {
+  background: #fddab6;
+  border-radius: 30px;
+  padding:15px;
+  box-shadow:none;
+  text-align:center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.card img {
+  width: 60%;
+  height:100%;
+  object-fit:cover;  /* Makes images fill the space nicely without distortion */
+  border-radius: 20px;      /* Remove the placeholder border */
+  box-shadow: 0 4px 8px rgb(0 0 0 / 50%);
+  margin: 0px;
+}
+
+.text-box {
+  background: #fddab6;
+  padding: 25px 27px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  margin: 5px 46px 188px 46px;
+  text-align: center;
+}
+
+.activities-box {
+  background: #fddab6;
+  padding: 25px 27px;
+  border-radius: 88px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  margin: 100px 92px 20px;
+  border-radius: 20px;
+}
+
+.activities-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* images slightly narrower than text */
+  gap: 30px;
+  align-items: center;
+}
+
+.activities-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.activities-image img {
+  width: 100%;        /* scale images down naturally */
+  max-width: 220px;  /* keeps them a little smaller */
+  margin: 0 auto;
+  border-radius:30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.activities-text-box {
+  background: #fddab6;
+  border-radius: 30px;
+  margin: 10px 40px;
+  padding: 12px 13px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+.lodging-box {
+  background: #fddab6;
+  padding: 25px 27px;
+  border-radius: 88px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  margin: 40px 92px 20px;
+  border-radius: 20px;
+} 
+
+.dining-image img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+.dining-text-box {
+  background: #fddab6;
+  padding: 23px 27px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  margin: 11px 46px 30px 46px;
+  line-height: 1.33;
+}
+
+.transportation-layout {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 25px;
+}
+
+/* Two images side by side */
+.trans-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px;
+  border-radius: 30px;
+  margin: 0px 100px;
+  padding: 0px 100px;
+}
+
+.transimage {
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+/* Image sizing */
+.trans-image img {
+  width: 85%;
+  height: 79%;
+  max-height: 417px;
+  object-fit: fill;
+}
+
+/* Text box styling */
+.trans-box {
+  background: #fddab6;
+  padding: 20px 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  margin: -62px 400px 0px;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.restaurant-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.grocery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.take-out {
+  padding: 10px 29px;
+  margin: 10px 10px;
+  background: #fddab6;
+  border-radius: 30px;
+  text-align: left;
+  line-height: 2.5;
+}
+
+.lodging-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  align-items: center;
+}
+
+.lodging-image {
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+/* Image gets the rounded corners + shadow */
+.lodging-image img {
+  width: 100%;
+  height: 220px;         /* pick your height */
+  object-fit: cover;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  display: block;
+}
+
+/* Caption stays clean (no box) */
+.lodging-image figcaption {
+  background: transparent;
+  box-shadow: none;
+  padding: 6px 0 0;
+  margin: 0;
+  border-radius: 0;
+  font-size: 0.7rem;
+  color: #444;
+  text-align: center;
+}
+
+.lodging-text {
+  background: #fddab6;          /* tan box */
+  padding: 10px 14px;
+  margin-top: 10px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+/* Forms */
+form {
+  background:#fff; 
+  max-width:600px; 
+  margin:30px auto; 
+  padding:10px; 
+  border-radius:12px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+form label { 
+  display:block; 
+  margin:15px 0 5px; 
+  font-weight:bold; 
+}
+
+form input, form select {
+  width: 100%;
+  padding: 3px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.date-row { 
+  display:flex; 
+  gap:20px; 
+  flex-wrap:wrap; 
+}
+
+.date-row > div { 
+  flex:1; 
+  min-width:200px; 
+}
+
+.submit-btn {
+  background:#003087; 
+  color:white; 
+  padding:15px 40px; 
+  font-size:1.2rem; 
+  border:none;
+  border-radius:30px; 
+  cursor:pointer; 
+  margin-top:30px; 
+  width:100%;
+}
+
+.submit-btn:hover { 
+  background:#0050c0; 
+}
+
+footer { 
+  width: 100%;
+  background:#0c87ba; 
+  color:white; 
+  text-align:center; 
+  padding:20px; 
+  margin-top:60px; 
+}
+
+/* Specific page styles */
+.hero { 
+  text-align:center; 
+  margin:40px 0; 
+}
+
+.hero .btn { 
+  display:inline-block; 
+}
+
+/* Split Hero Section */
+.hero-split {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* beach a bit wider, like your screenshot */
+  gap: 60px;
+  align-items: start;
+  margin: 60px 80px;
+}
+
+
+.hero-split img {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;         /* Prevents it from getting too short */
+  object-fit: cover;         /* Crops nicely to fill the space */
+  border-radius: 12px;       /* Optional: soft corners */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.honeymoon img {
+  width: 100%;
+  height: 75%;
+  min-height: 250px;         /* Prevents it from getting too short */
+  object-fit: cover;         /* Crops nicely to fill the space */
+  border-radius: 12px;       /* Optional: soft corners */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.hero-text {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.hero-text h2 {
+  font-size: 3.2rem;
+  margin: 0 0 10px;
+  text-decoration: underline;
+}
+
+.hero-text .btn {
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin: 0 0 22px;
+}
+
+.hero-btn {
+  display: inline-block;
+  width: 70%;
+  max-width: 420px;
+  padding: 18px 24px;
+  border-radius: 16px;
+  font-size: 1.3rem;
+  margin-bottom: 24px;
+}
+
+/* Responsive: Stack on mobile */
+@media (max-width: 900px) {
+  .hero-split {
+    grid-template-columns: 1fr;
+    margin: 30px 20px;
+  }
+
+  .hero-image img {
+    height: 360px;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+}
+
+.ad-btn img {
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 4 / 1;
+  object-fit: contain;   /* 👈 keeps all words visible */
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  display: block;
+}
+
+  figcaption {
+  font-size: 0.65rem;
+  color: #666;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.hero-image {
+  margin: 0;
+}
+
+
+.hero-image img {
+  width: 100%;
+  height: 520px;        /* makes it big like the screenshot */
+  object-fit: cover;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.hero-image figcaption {
+  font-size: 0.65rem;
+  color: #666;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.dining-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "image tips"
+    "text  tips";
+  gap: 0px 40px;
+  padding: 0 80px;
+}
+
+.dining-image {
+  grid-area: image;
+}
+
+.dining-text {
+  grid-area: text;
+  padding: 25px 25px;
+  margin: 33px 50px;
+}
+
+.card.dining-image img {
+  width: 100%;
+  max-width: 700px;  /* change this to whatever size you want */
+  height: auto;
+}
+
+.travel-tips {
+  grid-area: tips;
+}
+
+.quick-facts {
+  margin: -5px 28px;
+  padding: 9px;
+}
+
+a img {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.ad-btn {
+  background: none;
+  padding: 0;
+}
+
+
+.ad-btn img {
+  box-shadow: none !important;
+  background: transparent;
+  border-radius: 30px;          /* optional — removes rounded box look */
+  margin-top: -50px;
+}
+
+img {
+  border-radius: 30px;
+}

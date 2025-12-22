@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking - Taniti</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Taniti</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="lodging.html">Lodging</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <h2>Booking</h2>
+  <form action="reserved.html">
+    <label>Name</label>
+    <input type="text" required>
+
+    <label>E-mail</label>
+    <input type="email" required>
+
+    <label>Phone</label>
+    <input type="tel">
+
+    <label for="arriving">Arriving by</label>
+    <select id="arriving" name="arriving" required>
+      <option value="" disabled selected>Select an option</option>
+      <option value="none">None</option>
+      <option value="air">Air</option>
+      <option value="Cruise">Cruise</option>
+    </select>
+
+    <label for="transportation">Transportation</label>
+    <select id="transportation" name="transportation" required>
+      <option value="" disabled selected>Select an option</option>
+      <option value="none">None</option>
+      <option value="airport_shuttle">Airport shuttle</option>
+      <option value="rental_car">Rental car</option>
+      <option value="taxi">Taxi</option>
+      <option value="public_transit">Public transit</option>
+    </select>
+
+    <label for="lodging">Lodging</label>
+    <select id="lodging" name="lodging" required>
+      <option value="" disabled selected>Select an option</option>
+      <option value="hostel">Hostel</option>
+      <option value="hotel">Hotel</option>
+      <option value="resort">4-star resort</option>
+      <option value="bnb">Bed & Breakfast</option>
+    </select>
+
+    <label for="attractions">Local Attractions?</label>
+    <select id="attractions" name="attractions" required>
+      <option value="" disabled selected>Select an option</option>
+      <option value="yes">Yes</option>
+      <option value="no">No</option>
+    </select>
+
+    <label for="party_size">Party size</label>
+    <select id="party_size" name="party_size" required>
+      <option value="" disabled selected>Select party size</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8+</option>
+    </select>
+
+    <div class="date-row">
+      <div>
+        <label>From:</label>
+        <input type="date" required>
+      </div>
+      <div>
+        <label>To:</label>
+        <input type="date" required>
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">BOOK NOW!</button>
+  </form>
+</div>
+
+<footer>
+  <p>&copy; 2025 Taniti Tourism Board. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
